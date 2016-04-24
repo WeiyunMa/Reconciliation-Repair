@@ -1,0 +1,49 @@
+COG0040.newick
+# of Reconciliations: 15
+# of Infeasible Reconciliations: 15
+D: 2 S: 38 T: 30 L: 26 total: 120
+D: 22 S: 30 T: 18 L: 178 total: 276
+number of operations: 129
+D: 1 S: 38 T: 31 L: 25 total: 120
+D: 29 S: 26 T: 15 L: 214 total: 317
+number of operations: 161
+D: 1 S: 37 T: 32 L: 22 total: 120
+D: 21 S: 31 T: 18 L: 169 total: 265
+number of operations: 116
+D: 2 S: 37 T: 31 L: 23 total: 120
+D: 32 S: 25 T: 13 L: 238 total: 341
+number of operations: 208
+D: 2 S: 38 T: 30 L: 26 total: 120
+D: 30 S: 26 T: 14 L: 225 total: 327
+number of operations: 185
+D: 2 S: 37 T: 31 L: 23 total: 120
+D: 31 S: 26 T: 13 L: 225 total: 326
+number of operations: 195
+D: 2 S: 38 T: 30 L: 26 total: 120
+D: 24 S: 28 T: 18 L: 185 total: 287
+number of operations: 151
+D: 2 S: 37 T: 31 L: 23 total: 120
+D: 30 S: 26 T: 14 L: 223 total: 325
+number of operations: 179
+D: 2 S: 38 T: 30 L: 26 total: 120
+D: 23 S: 30 T: 17 L: 184 total: 281
+number of operations: 141
+D: 2 S: 38 T: 30 L: 26 total: 120
+D: 30 S: 26 T: 14 L: 225 total: 327
+number of operations: 183
+D: 2 S: 37 T: 31 L: 23 total: 120
+D: 30 S: 26 T: 14 L: 223 total: 325
+number of operations: 195
+D: 2 S: 37 T: 31 L: 23 total: 120
+D: 25 S: 28 T: 17 L: 191 total: 292
+number of operations: 142
+D: 2 S: 37 T: 31 L: 23 total: 120
+D: 31 S: 26 T: 13 L: 229 total: 330
+number of operations: 202
+D: 2 S: 37 T: 31 L: 23 total: 120
+D: 23 S: 30 T: 17 L: 184 total: 281
+number of operations: 135
+D: 2 S: 37 T: 31 L: 23 total: 120
+D: 31 S: 26 T: 13 L: 229 total: 330
+number of operations: 204
+min total: 265

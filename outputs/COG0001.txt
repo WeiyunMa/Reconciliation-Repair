@@ -1,0 +1,16 @@
+COG0001.newick
+# of Reconciliations: 4
+# of Infeasible Reconciliations: 4
+D: 1 S: 46 T: 37 L: 17 total: 130
+D: 2 S: 45 T: 37 L: 21 total: 136
+number of operations: 4
+D: 1 S: 46 T: 37 L: 17 total: 130
+D: 2 S: 45 T: 37 L: 21 total: 136
+number of operations: 4
+D: 1 S: 46 T: 37 L: 17 total: 130
+D: 4 S: 44 T: 36 L: 29 total: 145
+number of operations: 15
+D: 1 S: 46 T: 37 L: 17 total: 130
+D: 2 S: 45 T: 37 L: 21 total: 136
+number of operations: 4
+min total: 136

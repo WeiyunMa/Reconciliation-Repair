@@ -1,0 +1,34 @@
+COG0009.newick
+# of Reconciliations: 10
+# of Infeasible Reconciliations: 10
+D: 2 S: 65 T: 54 L: 27 total: 193
+D: 40 S: 52 T: 29 L: 269 total: 436
+number of operations: 244
+D: 2 S: 65 T: 54 L: 27 total: 193
+D: 39 S: 51 T: 31 L: 254 total: 425
+number of operations: 244
+D: 2 S: 65 T: 54 L: 27 total: 193
+D: 35 S: 52 T: 34 L: 233 total: 405
+number of operations: 220
+D: 2 S: 65 T: 54 L: 27 total: 193
+D: 40 S: 52 T: 29 L: 269 total: 436
+number of operations: 247
+D: 2 S: 65 T: 54 L: 27 total: 193
+D: 42 S: 49 T: 30 L: 264 total: 438
+number of operations: 258
+D: 2 S: 65 T: 54 L: 27 total: 193
+D: 40 S: 52 T: 29 L: 268 total: 435
+number of operations: 243
+D: 2 S: 65 T: 54 L: 27 total: 193
+D: 42 S: 51 T: 28 L: 278 total: 446
+number of operations: 266
+D: 2 S: 65 T: 54 L: 27 total: 193
+D: 42 S: 51 T: 28 L: 275 total: 443
+number of operations: 261
+D: 2 S: 65 T: 54 L: 27 total: 193
+D: 44 S: 51 T: 26 L: 287 total: 453
+number of operations: 268
+D: 2 S: 65 T: 54 L: 27 total: 193
+D: 40 S: 52 T: 29 L: 269 total: 436
+number of operations: 245
+min total: 405
