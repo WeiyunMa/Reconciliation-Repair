@@ -24,12 +24,14 @@ def recon_tree_to_dtl(T):
         event, _, _ = T[mapping_node]
         if event != 'L':
             M[g] = s
-            {
-                'S': lambda: sigma.append(g),
-                'D': lambda: delta.append(g),
-                'C': lambda: L[g] = s,
-                'T': lambda: theta.append(g)
-            }[event]()
+            if event == 'S':
+                sigma.append(g)
+            elif event == 'D':
+                delta.append(g)
+            elif event == 'C':
+                L[g] = s
+            elif event == 'T':
+                theta.append(g)
 
 
     for g in theta:
@@ -130,7 +132,7 @@ def is_cycle(F, g):
     return explore(F, {}, g, g)
 
 
-def find_first_cycle(G, G_dict, S, S_dict, alpha, flag=0):
+def find_first_cycle(G, G_dict, S, S_dict, alpha):
     L, M, sigma, delta, theta, xi, tau = alpha
     T = dtl_to_recon_tree(S, G, alpha)
     F = buildReconciliation(S_dict, G_dict, T)
@@ -138,13 +140,6 @@ def find_first_cycle(G, G_dict, S, S_dict, alpha, flag=0):
     post_order_S = [node.name for node in S.traverse("postorder")]
     nodes = sorted([node.name for node in G.search_nodes() if node not in G.search_nodes(children=[])],
                    key=lambda g: post_order_S.index(M[g]))
-
-    if flag == 1:
-        print 'F', F
-        print
-        print post_order_S
-        print
-        print [M[g] for g in nodes]
 
     for g in nodes:
         if is_cycle(F, g):
@@ -167,19 +162,21 @@ def out(S, G, alpha, outFile):
     T = dtl_to_recon_tree(S, G, alpha)
     d, s, t, l = 0, 0, 0, 0
     for key in T.keys():
-        {
-            'D': lambda: d += 1,
-            'S': lambda: s += 1,
-            'T': lambda: t += 1,
-            'L': lambda: l += 1
-        }[T[key][0]]()
+        if T[key][0] == 'D':
+            d += 1
+        elif T[key][0] == 'S':
+            s += 1
+        elif T[key][0] == 'T':
+            t += 1
+        elif T[key][0] == 'L':
+            l += 1
 
     print "D:", d, "S:", s, "T:", t, "L:", l, "total:", d * 2 + t * 3 + l
     outFile.write("D: {0} S: {1} T: {2} L: {3} total: {4}\n".format(str(d),
                                                                     str(s),
                                                                     str(t),
                                                                     str(l),
-                                                                    str(d * 2 + t * 3 + l))
+                                                                    str(d * 2 + t * 3 + l)))
 
     return d * 2 + t * 3 + l
 

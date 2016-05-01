@@ -45,11 +45,6 @@ def main():
 		host, parasite, phi = newickFormatReader.getInput(inFile)
 		H = treeFormat(host)
 		P = treeFormat(parasite)
-		# print H
-		# print
-		# print P
-		# print
-		# print phi 			# parasiteTip:hostTip
 
 		H_dict = {}   # name:index
 		P_dict = {}   # name:index

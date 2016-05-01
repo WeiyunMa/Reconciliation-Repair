@@ -11,8 +11,6 @@ def date(recon):
 		for child in recon[key]:
 			if child != None:
 				dicto[child] = 0
-			# else:
-			#	Leaves[key] sudo easy_install -f http://biopython.org/DIST/ biopython= True
 	for key in Leaves.keys():
 		if key in dicto.keys():
 			del dicto[key]
@@ -37,7 +35,6 @@ def date(recon):
 					del dicto[child]
 					LonerList.append(child)
 	if len(dicto.keys()) > 0:
-		# print "TimeTravel", dicto,
 		return False
 	for item in Leaves:
 		order[item] = len(Leaves)

@@ -4,7 +4,7 @@ from cStringIO import StringIO
 
 def main():
 
-	for i in xrange(6000):
+	for i in xrange(100):
 
 		index = str(i + 1)
 

@@ -52,12 +52,15 @@ def main():
 
 					d, s, t, l = 0, 0, 0, 0
 					for key in T.keys():
-						{
-							'D': lambda: d += 1,
-							'S': lambda: s += 1,
-							'T': lambda: t += 1,
-							'L': lambda: l += 1
-						}[T[key][0]]()
+						if T[key][0] == 'D':
+							d += 1
+						elif T[key][0] == 'S':
+							s += 1
+						elif T[key][0] == 'T':
+							t += 1
+						elif T[key][0] == 'L':
+							l += 1
+
 					score = d * 2 + t * 3 + l
 
 					optimalX.append(i + 1)
