@@ -2,7 +2,7 @@
 
 Use/run the files in the following order:
 
-1. Unzip the file real-100taxa.zip into real-100taxa folder
+1. Unzip real-100taxa.zip into real-100taxa folder
 2. python newickToTreeParser.py
 3. python fixer.py
 4. python execJane.py
