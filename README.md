@@ -1,6 +1,6 @@
 # Reconciliation-Repair
 
-Run the programs in the following order:
+Run in the following order:
 
 1. python newickToTreeParser.py
 2. python fixer.py
