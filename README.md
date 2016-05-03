@@ -7,3 +7,5 @@ Run in the following order:
 3. python execJane.py
 4. python calcJaneCost.py
 5. python makePlot.py
+
+The following external libraries are required: biopython, ete2, networkx, numpy, matplotlib.
