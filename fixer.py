@@ -25,6 +25,7 @@ import newickFormatReader
 from ReconciliationGraph import buildReconciliation
 import MasterReconciliation
 import os.path
+import os
 
 
 # Global variables (can be customized in the future)
@@ -233,6 +234,9 @@ def eteTreeReader(fileName):
 
 
 def main():
+
+    if not os.path.exists("fixerOut"):
+        os.mkdir("fixerOut")
 
     for i in xrange(fileNum):
 

@@ -34,12 +34,16 @@
 # python libraries
 from cStringIO import StringIO
 import os.path
+import os
 
 import newickFormatReader
 from ReconciliationGraph import treeFormat
 
 
 def main():
+
+	if not os.path.exists("treeFiles"):
+		os.mkdir("treeFiles")	
 	
 	for i in xrange(6000):
 

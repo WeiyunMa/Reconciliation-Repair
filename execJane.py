@@ -24,6 +24,9 @@ numOfGenerations = 30
 
 def main():
 
+	if not os.path.exists("janeOut"):
+		os.mkdir("janeOut")
+
 	for i in xrange(fileNum):
 
 		index = str(i + 1)
