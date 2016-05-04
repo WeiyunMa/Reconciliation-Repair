@@ -1,7 +1,10 @@
 # MasterReconciliation.py
 # Juliet Forman, Srinidhi Srinivasan, Annalise Schweickart, and Carter Slocum
 # July 2015
-
+#
+# Modified by Weiyun Ma
+# May 2016
+#
 # This file contains functions for computing maximum parsimony 
 # DTL reconciliations using the edge-based DP algorithm.  The main # # function in this file is called Reconcile and the remaining 
 # functions are helper functions that are used by Reconcile.
@@ -45,8 +48,6 @@ def Reconcile(argList):
 
 	DTLGraph = copy.deepcopy(DTLReconGraph)
 	scoresList, recs = Greedy.Greedy(DTLGraph, paras)
-
-	print "# of Reconciliations:", len(recs)
 
 	infeasible_recs = []
 	for rec in recs:

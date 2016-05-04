@@ -1,9 +1,27 @@
+# makePlot.py
+#
+# Weiyun Ma, Dima Smirnov
+# May 2016
+#
+# This file plots costs of temporally consistent reconciliations 
+# found by TemporalConsistencyFixer algorithm against those found
+# by Jane for the first 100 files in real-100taxa dataset.
+#
+# Run with
+#   python makePlot.py
+
 import os
 import os.path
 from cStringIO import StringIO
 import matplotlib.pyplot as plt
 import numpy as np
 import MasterReconciliation
+
+# Global variables (can be customized in the future)
+dVal = 2
+tVal = 3
+lVal = 1
+fileNum = 100
 
 def main():
 
@@ -13,18 +31,15 @@ def main():
 	fixerList = []
 	optimalX = []
 	optimalList = []
-	dVal = 2
-	tVal = 3
-	lVal = 1
 
-	for i in xrange(100):
+	for i in xrange(fileNum):
 
 		index = str(i + 1)
 
 		for j in xrange(4 - len(str(i + 1))):
 			index = "0" + index
 
-		f = "janeOut100/COG" + index + ".txt"
+		f = "janeCosts/COG" + index + ".txt"
 
 		if not os.path.isfile(f):
 			continue
@@ -39,7 +54,7 @@ def main():
 
 		janeFile.close()
 
-		f = "outputs/COG" + index + ".txt"
+		f = "fixerOut/COG" + index + ".txt"
 
 		fixerFile = open(f, 'r')
 
@@ -61,7 +76,7 @@ def main():
 						elif T[key][0] == 'L':
 							l += 1
 
-					score = d * 2 + t * 3 + l
+					score = d * dVal + t * tVal + l * lVal
 
 					optimalX.append(i + 1)
 					optimalList.append(score)
@@ -75,13 +90,6 @@ def main():
 
 		print "Done ", index
 
-	print janeList
-	print len(janeList)
-	print fixerList
-	print len(fixerList)
-	print optimalList
-	print len(optimalList)
-
 	plt.plot(janeX, janeList, 'ro', label='Jane')
 	plt.plot(fixerX, fixerList, 'b*', label='Fixer Alg')
 	plt.plot(optimalX, optimalList, 'y*', label='Optimal (No Fixing Needed)')
@@ -89,7 +97,7 @@ def main():
 	plt.ylabel('Cost')
 	plt.legend()
 	plt.grid()
-	plt.xticks(np.arange(0, 100, 1))
+	plt.xticks(np.arange(0, fileNum, 1))
 	plt.show()
 
 

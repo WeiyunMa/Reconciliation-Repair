@@ -1,3 +1,16 @@
+# fixer.py
+#
+# Weiyun Ma, Dima Smirnov
+# May 2016
+#
+# This file runs the TemporalConsistencyFixer algorithm on the 
+# first 100 .newick files in the real-100taxa folder and writes
+# outputs into corresponding .txt files in the fixerOut folder.
+#
+# Run with
+#   python fixer.py
+
+
 # python libraries
 from cStringIO import StringIO
 
@@ -13,6 +26,12 @@ from ReconciliationGraph import buildReconciliation
 import MasterReconciliation
 import os.path
 
+
+# Global variables (can be customized in the future)
+dVal = 2
+tVal = 3
+lVal = 1
+fileNum = 100
 
 def recon_tree_to_dtl(T):
     sigma, delta, theta, xi = [], [], [], []
@@ -171,14 +190,14 @@ def out(S, G, alpha, outFile):
         elif T[key][0] == 'L':
             l += 1
 
-    print "D:", d, "S:", s, "T:", t, "L:", l, "total:", d * 2 + t * 3 + l
+    print "D:", d, "S:", s, "T:", t, "L:", l, "total:", d * dVal + t * tVal + l * lVal
     outFile.write("D: {0} S: {1} T: {2} L: {3} total: {4}\n".format(str(d),
                                                                     str(s),
                                                                     str(t),
                                                                     str(l),
-                                                                    str(d * 2 + t * 3 + l)))
+                                                                    str(d * dVal + t * tVal + l * lVal)))
 
-    return d * 2 + t * 3 + l
+    return d * dVal + t * tVal + l * lVal
 
 
 def preprocess(st):
@@ -214,11 +233,8 @@ def eteTreeReader(fileName):
 
 
 def main():
-    dVal = 2
-    tVal = 3
-    lVal = 1
 
-    for i in xrange(100):
+    for i in xrange(fileNum):
 
         index = str(i + 1)
         for j in xrange(4 - len(str(i + 1))):
@@ -228,7 +244,7 @@ def main():
         if not os.path.isfile(fileName):
             continue
 
-        outFile = open("outputs/COG" + index + ".txt", 'w')
+        outFile = open("fixerOut/COG" + index + ".txt", 'w')
 
         print fileName[13:]
         outFile.write(fileName[13:] + "\n")

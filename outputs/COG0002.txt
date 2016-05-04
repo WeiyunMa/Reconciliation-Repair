@@ -1,4 +1,0 @@
-COG0002.newick
-# of Reconciliations: 5
-# of Infeasible Reconciliations: 0
-min total: None
