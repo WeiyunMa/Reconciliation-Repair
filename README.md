@@ -10,5 +10,5 @@ Use/run the files in the following order:
 6. Run makePlot.py. This should plot costs of temporally consistent reconciliations found by TemporalConsistencyFixer algorithm as well as those found by Jane against file indices based on files in folders fixOut and janeCosts.
 
 A few notes:  
-1. The following external libraries are required to run the code: biopython, ete2, networkx, numpy, matplotlib.  
-2. There are already two generated plots in folder plots. Both plots compare reconciliation costs found by TemporalConsistencyFixer algorithm and Jane for the first 100 files in real-100taxa dataset. Both plots are generated using DTL values of 2, 3 and 1, respectively. The only difference between the two plots is that plot30\_30.png is generated using 30 generations and a population of size 30 for Jane while plot100\_100.png is generated using 100 generations and a population of size 100 for Jane.
+* The following external libraries are required to run the code: biopython, ete2, networkx, numpy, matplotlib.  
+* There are already two generated plots in folder plots. Both plots compare reconciliation costs found by TemporalConsistencyFixer algorithm and Jane for the first 100 files in real-100taxa dataset. Both plots are generated using DTL values of 2, 3 and 1, respectively. The only difference between the two plots is that plot30\_30.png is generated using 30 generations and a population of size 30 for Jane while plot100\_100.png is generated using 100 generations and a population of size 100 for Jane.
