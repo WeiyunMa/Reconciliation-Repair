@@ -3,9 +3,9 @@
 # Weiyun Ma, Dima Smirnov
 # May 2016
 #
-# This file plots costs of temporally consistent reconciliations 
-# found by TemporalConsistencyFixer algorithm against those found
-# by Jane for the first 100 files in real-100taxa dataset.
+# This file plots costs of temporally consistent reconciliations found 
+# by TemporalConsistencyFixer algorithm as well as those found by Jane 
+# against file indices.
 #
 # Run with
 #   python makePlot.py

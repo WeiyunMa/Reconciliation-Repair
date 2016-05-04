@@ -14,6 +14,11 @@ import os
 import os.path
 from cStringIO import StringIO
 
+# Global variables (can be customized in the future)
+dVal = 2
+tVal = 3
+lVal = 1
+
 def main():
 
 	if not os.path.exists("janeCosts"):
@@ -34,22 +39,19 @@ def main():
 		inFile = open(f, 'r')
 
 		ans = 0
-		d = 2
-		t = 3
-		l = 1
 
 		for line in inFile:
 			if line.startswith("Duplication: "):
 				num = int(line[13:])
-				ans += num * d
+				ans += num * dVal
 				print num
 			elif line.startswith("Host Switch: "):
 				num = int(line[12:])
-				ans += num * t
+				ans += num * tVal
 				print num
 			elif line.startswith("Loss: "):
 				num = int(line[6:])
-				ans += num * l
+				ans += num * lVal
 				print num
 
 		print ans

@@ -3,7 +3,7 @@
 # Modified by Weiyun Ma
 # May 2016
 #
-# This files converts .newick files in the real-100taxa folder into
+# This files converts all .newick files in the real-100taxa folder into
 # corresponding .tree files (that are later used as Jane's inputs) 
 # in the treeFiles folder.
 #
